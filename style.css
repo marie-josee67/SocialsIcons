@@ -1,0 +1,84 @@
+* {
+    margin: 0;/* marge extérieur */
+    padding: 0;/* marge interne */
+    box-sizing: border-box;/* toutes les <div> on la même taille */
+    font-family: "Poppins";/* police de caratère pour toute la page*/
+}
+
+#container {/*container = wrapper */
+    display: flex;/* élément côte à côte */
+    flex-wrap: wrap; /* permet un retour à la ligne des cards si la largeur de l'écran est réduite */
+    min-height: 100vh; /* prendre toute la hauteur du viewport (fenêtre) */
+    background: linear-gradient( #ABB2B9, #F4F6F7 , #ABB2B9 );/* couleur de fond horitontal*/
+    justify-content: center;/* alignement horizontal*/
+    align-items: center;/*alignement verticale*/
+    gap: 10px; /* écart entre les cards */
+    flex-wrap: wrap;/* permet d'adapter à la taille de l'écran seulement si display est flex sinon marche pas*/ 
+    /*border: 3px solid rgb(200, 14, 14) à enlever à la fin*/
+}
+h1{
+    height: 40px;
+    font-style: normal;/* style de police*/
+    font-weight: 700;/*gras de police choisit*/
+    font-display: swap;/* La propriété font-display détermine la façon dont une fonte est affichée selon qu'elle ait été chargée et prête à être utilisée.
+    La période de blocage est extrêmement courte et est suivie par une période d'échange infinie.*/
+    /*border: 3px solid rgb(42, 28, 200); à enlever à la fin*/
+}
+.card {
+    background: rgb(122, 118, 118);
+    width: 100px;
+    height:100px;
+    border-radius: 10px;
+    position:relative;
+   /* overflow:hidden; cache tous se qui dépasse */
+    justify-content: center;
+    align-items: center;
+    display: flex;/* a mettre a chaque fois que l'on veut positionner un enfant par rapport a son parent*/
+    /*border: 3px double rgb(28, 200, 71); à enlever à la fin*/
+}
+.card a { /* logo reseau sociaux*/
+    color: #fff;
+    font-size: 60px;  
+    /*border: 3px solid rgb(200, 154, 28); à enlever à la fin*/
+}
+.card h2 {/* nom du réseau sociaux*/
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;/* gras de police*/
+    font-display: swap;
+    position:absolute;
+    /*border: 5px solid rgb(200, 28, 174); à enlever à la fin*/
+    opacity:0;
+    transition:0.5s;
+    top:0;  
+} 
+
+.facebook:hover{ /* couleur lors du passage de la souris */
+    color: #0165E1 ;  
+    background: linear-gradient( #17A9FD, #0165E1 );;  
+}
+.Twitter:hover{
+    color: #1D9BF0 ;    
+    background: #1D9BF0;
+}
+.Instagram:hover{
+    color: #833AB4 ;    
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+.Watsapp:hover{
+    color: #28D146 ;   
+    background:linear-gradient( #5FFC7B, #28D146 );; 
+}
+.Youtube:hover{
+    color: #FF0000 ;  
+    background: #FF0000;;  
+}
+.card:Hover{/* mouvement lorsque la souris le touche*/
+    border-radius: 500%;/* fait un rond*/
+}   
+.card:hover h2{
+    top: -60px;
+    /* couleur de fond seulement du h2*/
+    opacity:1;/* faire réaparaitre le nom du réseau sociaux */
+}
+
